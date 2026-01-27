@@ -1,0 +1,112 @@
+/* Page background */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #4facfe,
+    #00c6fb
+  );
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px;
+  color: white;
+}
+
+/* Clouds overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/9QZ7x8N.png") repeat-x;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Input area */
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #ffffff33;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffffff55;
+}
+
+/* Search results */
+#results li {
+  margin-top: 8px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+}
+
+/* Weather card */
+.weather-card {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: fit-content;
+}
+
+/* Icon on the left */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* Text on the right */
+.weather-info {
+  margin-left: 20px;
+}
+
+/* Big temperature */
+.temperature {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Wind text */
+.wind {
+  font-size: 18px;
+  opacity: 0.9;
+}
+.hourly {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hour {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.hour-time {
+  font-size: 14px;
+}
+
+.hour img {
+  width: 40px;
+}
+
+.hour-temp {
+  font-size: 18px;
+  font-weight: 500;
+}
+
