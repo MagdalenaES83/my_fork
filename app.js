@@ -2,7 +2,7 @@ import {
   fetchCities,
   fetchWeather,
   formatWeatherData
-} from "./script.js";
+} from "./api.js";
 
 // =====================
 // DOM ELEMENTS
@@ -17,7 +17,6 @@ const weatherDiv = document.getElementById("weather");
 // =====================
 searchBtn.addEventListener("click", onSearchClick);
 
-// Optional: press Enter to search
 cityInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     onSearchClick();
@@ -42,8 +41,8 @@ async function onSearchClick() {
     }
 
     renderCityResults(cities);
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
     showMessage("Failed to load cities");
   }
 }
@@ -55,8 +54,8 @@ async function onCitySelected(lat, lon) {
     const data = await fetchWeather(lat, lon);
     const weather = formatWeatherData(data);
     renderWeather(weather);
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
     showMessage("Failed to load weather");
   }
 }
