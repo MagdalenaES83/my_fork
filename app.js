@@ -4,8 +4,6 @@ import {
   formatWeatherData
 } from "./script.js";
 
-
-
 // =====================
 // DOM ELEMENTS
 // =====================
