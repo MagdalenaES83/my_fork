@@ -30,7 +30,7 @@ jobs:
         run: npm run build   # Make sure your package.json has a build script
           
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: ./build      # Path to your static files (React: build, Vue: dist)
