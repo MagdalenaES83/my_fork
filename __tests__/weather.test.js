@@ -2,7 +2,8 @@ import {
   fetchCities,
   fetchWeather,
   formatWeatherData
-} from "../script.js";
+} from "../api.js";
+
 
 // Mock the global fetch API
 global.fetch = jest.fn();

@@ -1,10 +1,4 @@
-import {
-  fetchCities,
-  fetchWeather,
-  formatWeatherData
-} from "./script.js";
-
-
+import "./script.js";
 
 // =====================
 // DOM ELEMENTS
@@ -81,21 +75,6 @@ function renderCityResults(cities) {
 
     resultsList.appendChild(li);
   });
-}
-
-function renderWeather(weather) {
-  const iconUrl = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-
-  weatherDiv.innerHTML = `
-    <div class="weather-card">
-      <img src="${iconUrl}" alt="${weather.description}" />
-      <div class="weather-info">
-        <div class="temp">${weather.temp}°C</div>
-        <div class="wind">💨 ${weather.wind} m/s</div>
-        <div class="desc">${weather.description}</div>
-      </div>
-    </div>
-  `;
 }
 
 function clearUI() {
